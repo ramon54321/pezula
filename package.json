@@ -1,0 +1,12 @@
+{
+  "name": "pezula",
+  "version": "1.0.0",
+  "description": "Pezula website.",
+  "main": "index.js",
+  "scripts": {
+    "test": "",
+    "start": "node index.js"
+  },
+  "author": "Ramon Brand",
+  "license": "Proprietary"
+}
