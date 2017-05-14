@@ -4,9 +4,12 @@
   "description": "Pezula website.",
   "main": "index.js",
   "scripts": {
-    "test": "",
+    "build": "webpack",
     "start": "node server.js"
   },
   "author": "Ramon Brand",
-  "license": "Proprietary"
+  "license": "Proprietary",
+  "devDependencies": {
+    "webpack": "^2.5.1"
+  }
 }
