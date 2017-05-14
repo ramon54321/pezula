@@ -1,5 +1,6 @@
 ## Status
 [![Build Status](https://travis-ci.org/ramon54321/pezula.svg?branch=master)](https://travis-ci.org/ramon54321/pezula)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-red.svg)](http://creativecommons.org/licenses/by-nc-nd/4.0/)
 
 ## Pipeline
 **Local** - Push > **GitHub** - Hook > **Travis** > Docker Build - Docker Push - Run Shell on Server
