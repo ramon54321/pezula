@@ -1,7 +1,8 @@
-# Readme
+## Status
+[![Build Status](https://travis-ci.org/ramon54321/pezula.svg?branch=master)](https://travis-ci.org/ramon54321/pezula)
 
 ## Pipeline
-
+**Local** - Push > **GitHub** - Hook > **Travis** > Docker Build - Docker Push - Run Shell on Server
 
 ## Travis Encryption Process
 ### Process
