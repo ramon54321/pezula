@@ -80,6 +80,7 @@ module.exports = cats;
 
 var cats = __webpack_require__(0);
 console.log(cats);
+document.write(cats);
 
 
 /***/ })
