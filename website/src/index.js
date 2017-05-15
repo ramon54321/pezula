@@ -1,28 +1,12 @@
-require('./style.sass');
-var cats = require('./cats.js');
+require('./style.sass')
+var cats = require('./cats.js')
+import React from 'react'
 
 
 class TodoStore {
 
-  todoList = ["Buy Milk", "Sell Car"];
-
   constructor() {
-    this.report();
-  }
-
-  addTodo(task) {
-    this.todoList.push({
-        task: task,
-        completed: false,
-      });
-  }
-
-  report() {
-    if(this.todoList.length === 0) {
-      console.log("No items in list.");
-    } else {
-      console.log("Items in list: " + todoList.length);
-    }
+    console.log("Built...");
   }
 
 }
