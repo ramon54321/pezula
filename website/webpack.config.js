@@ -1,12 +1,14 @@
 module.exports = {
-  entry: './src/app.js',
+  entry: {
+    index: './src/index.js'
+  },
   output: {
     path: __dirname + '/bin',
-    filename: 'app.bundle.js'
+    filename: '[name].bundle.js'
   },
   module: {
     loaders: [
-      { test: /\.css$/, loader: "style-loader!css-loader" },
+      { test: /\.sass$/, loader: "style-loader!css-loader!sass-loader" },
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
     ]
   }

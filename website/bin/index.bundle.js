@@ -68,7 +68,10 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
 
 var cats = ['dave', 'henry', 'martha'];
 module.exports = cats;
@@ -94,8 +97,8 @@ if(content.locals) module.exports = content.locals;
 if(false) {
 	// When the styles change, update the <style> tags
 	if(!content.locals) {
-		module.hot.accept("!!../node_modules/css-loader/index.js!./style.css", function() {
-			var newContent = require("!!../node_modules/css-loader/index.js!./style.css");
+		module.hot.accept("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./style.sass", function() {
+			var newContent = require("!!../node_modules/css-loader/index.js!../node_modules/sass-loader/lib/loader.js!./style.sass");
 			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 			update(newContent);
 		});
@@ -108,8 +111,49 @@ if(false) {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
+"use strict";
+
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
 __webpack_require__(1);
 var cats = __webpack_require__(0);
+
+var TodoStore = function () {
+  function TodoStore() {
+    _classCallCheck(this, TodoStore);
+
+    this.todoList = ["Buy Milk", "Sell Car"];
+
+    this.report();
+  }
+
+  _createClass(TodoStore, [{
+    key: 'addTodo',
+    value: function addTodo(task) {
+      this.todoList.push({
+        task: task,
+        completed: false
+      });
+    }
+  }, {
+    key: 'report',
+    value: function report() {
+      if (this.todoList.length === 0) {
+        console.log("No items in list.");
+      } else {
+        console.log("Items in list: " + todoList.length);
+      }
+    }
+  }]);
+
+  return TodoStore;
+}();
+
+var todoStore = new TodoStore();
+
 console.log(cats);
 document.write(cats);
 
@@ -122,7 +166,7 @@ exports = module.exports = __webpack_require__(4)(undefined);
 
 
 // module
-exports.push([module.i, "body {\r\n  background: yellow;\r\n}\r\n", ""]);
+exports.push([module.i, "body {\n  background: green; }\n", ""]);
 
 // exports
 
