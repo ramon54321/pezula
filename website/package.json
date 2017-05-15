@@ -2,7 +2,7 @@
   "name": "pezula",
   "version": "1.0.0",
   "description": "Pezula website.",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "webpack --progress --colors",
     "start": "node server.js"
