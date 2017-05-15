@@ -1,18 +1,18 @@
 require('./style.sass')
-var cats = require('./cats.js')
+
 import React from 'react'
+import ReactDOM from 'react-dom'
 
+import { observer } from "mobx-react"
+import store from "./store.js"
 
-class TodoStore {
+const app = document.getElementById("app")
 
-  constructor() {
-    console.log("Built...");
+@observer
+class TodoList extends React.Component {
+  render() {
+    return <p>Hello, {this.props.store.name}.</p>
   }
-
 }
 
-const todoStore = new TodoStore();
-
-
-console.log(cats);
-document.write(cats);
+ReactDOM.render(<TodoList store={store}/>, app)
