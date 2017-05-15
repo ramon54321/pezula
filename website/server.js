@@ -1,12 +1,12 @@
 var port = 80;
-var serverUrl = "127.0.0.1";
 
 var http = require("http");
 var path = require("path");
 var fs = require("fs");
 var checkMimeType = true;
 
-console.log("Starting web server at " + serverUrl + ":" + port);
+console.log("Starting web server on port:" + port);
+console.log(__dirname);
 
 http.createServer( function(req, res) {
 
@@ -59,7 +59,7 @@ http.createServer( function(req, res) {
 		console.log("Invalid file extension detected: " + ext + " (" + filename + ")")
 	}
 
-}).listen(port, serverUrl);
+}).listen(port);
 
 function getFile(localPath, res, mimeType) {
 	fs.readFile(localPath, function(err, contents) {
