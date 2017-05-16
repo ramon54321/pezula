@@ -5,15 +5,6 @@ before_install:
 - eval "$(ssh-agent -s)"
 - chmod 600 /tmp/deploy_rsa
 - ssh-add /tmp/deploy_rsa
-script:
-- docker build -t pezula ./website
 after_success:
-- docker login -u $DOCKER_USER -p $DOCKER_PASS
-- docker tag pezula ramon54321/pezula
-- docker push ramon54321/pezula
 - ssh-keyscan -t rsa -H 137.74.197.11 >> ~/.ssh/known_hosts
-- ssh root@137.74.197.11 sh ./script.sh
-env:
-  global:
-  - secure: I9Lf3R66iq8anSYEl1uYgzzIX6O4uLoknTBA5VBT3iSbcvKhCK52QnIbVwY32cfoZX4h764vlY2ie+h+nJGAJquogDVNKqtDA5gVMp5WennV86mvmGffI+/q1K/CsXlvY42VTtQD44jW/vmvU+AUC7U7rudqkZ2qEd3n7aUh3QJsJ+JRui3IjSSIJ8HVXuelfP79Yw29uWpCQh3glPIB1GRWhAtwTvXKHu7h7M/AUALAaVHKCqHelQXg+VXY3xYjiLEJ7AoL0enLY2BzOH3sjD5rffDxdw5tS/W3e91D4VKbSbECgrrt2qCIA+JDFsZFez2g3YWXdeNwfPS4XzrJO+26KP8ogutuhJ8U48nSB+oPPJ2n3AaC/xwM1lQOzQqG9b6i1IsKNqBpmEbwYPFry9uTZtlhqFoKE1U1fcpWy7KEhbrvG8bpiLkrQU7iFYT9wSblxkeZMFcSfKAQuV0y10HXeG0NV8gTqU/EMzvxI/VgZLprcMY74IPCsC7t1l1H3XjDJh2aZDYl7UnrUYuzb10hy++c9g1iBn19YRc9weE1lXeLCt6x5hVw7W/LhcellJ0C8/95cR76pSvRpXfUFJHzM5SOpnb5EdOvY0dkU0TbyHn+Q11W0CZg3erIh7ooPfUagD5n6ass3Z4c27xs7zzDmbZD59wbDH8kmrtrhEk=
-  - secure: dVdJhQTj+8iDR1pCdxeLysW8dDhcrwO0mmeHmlPIx98YpRloOfbO0N4aZOOID7g4aQrufpF9Ipu3fcwlSk0LLoYM0RpzyHavn5fhClqR8YI/FOacyVjpnJVYlb7BcqArpl21LpT/qpVwipV5noxAwPnDPZQ8jS6WRm7LztlQOyVcN5Jh62rNl8sE6Ccrj9Lj5qpc40lYOaoFQF9CVoCURtaG7U4ZKn+8l6JCCHbaOh2PM6ZQiiIW4JE/YqQfhe4J8GDu9ZWvecl404bLf1UP2/J4LntdCl5sZn/5C/10YbHknXJf8HRwzx8Vbj7zxU5BZYwfEC39PlFX3KgOvEPnrnAvnEM9Wy76+jFKivXnpKj+5/YkAt56mOxd+ZydrSANtcugWdIxgLR8eNd+GR0inQIMLxs2uIGuN8d6tfLkgCE/lJNsPwYZNh40dFxhLecHC86bfUS1Cpxe5qmoAzidOXxm7vnEOh/Ev8X+FpCiibd4IjWmnMyBhFwFWu3XABqEnryT4Y5rEKCsJhsYY6hmRZhQmiz0dZp5XIuRp3yJEDbaBdoAzr5V63GrfEooRXGOVvppf2Ld+Sgd5pSt6DaZHqyMJ/Odw5rf/YkKn0Z1gRBMGrTOxgz52adD4SJbR40RSlzdZUraWZC26/N7UCcerSYVsJ3hkgD8R/NH5CeTsmU=
+- ssh root@137.74.197.11 'bash -s' < serverdeploy.sh

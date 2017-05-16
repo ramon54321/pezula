@@ -1,3 +1,62 @@
+
+var express = require("express")
+var app = express()
+var mongoose = require("mongoose")
+var Schema = mongoose.Schema
+
+app.use(express.static("bin/static"))
+
+app.get('/', function (req, res) {
+	res.sendFile("./bin/index.html", { root: __dirname })
+})
+
+// Mongoose
+mongoose.connect("database-service:27017/devtest")
+var personSchema = new Schema({
+	name: String,
+	age: Number
+})
+var PersonModel = mongoose.model("Person", personSchema)
+
+// Api
+app.get('/api/person/findall', function (req, res) {
+	PersonModel.find().exec(function (err, data) {
+		if(err) {
+			console.log("Error in data retrieval.");
+		} else {
+			res.send(data)
+		}
+	})
+})
+
+app.get('/api/person/add', function (req, res) {
+	new PersonModel({
+		name: "James",
+		age: 27
+	}).save()
+})
+
+app.listen(80, function () {
+	console.log("Server listening on port 80.");
+})
+
+/*
+
+var MongoClient = require("mongodb").MongoClient;
+var format = require("util").format;
+
+console.log("Connecting to mongo");
+
+MongoClient.connect("mongodb://database-service:27017", function(err, db) {
+	if(err) {
+		throw err;
+	} else {
+		console.log("Connected.");
+	}
+
+	db.close();
+});
+
 var port = 80;
 
 var http = require("http");
@@ -76,3 +135,5 @@ function getFile(localPath, res, mimeType) {
 		}
 	});
 }
+
+*/
