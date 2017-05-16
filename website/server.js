@@ -23,6 +23,7 @@ app.get('/api/person/findall', function (req, res) {
 	PersonModel.find().exec(function (err, data) {
 		if(err) {
 			console.log("Error in data retrieval.");
+			res.send(err)
 		} else {
 			res.send(data)
 		}
