@@ -13,6 +13,8 @@ WORKDIR /usr/src/app
 COPY ./package.json /usr/src/app/package.json
 COPY ./server /usr/src/app/server/
 COPY ./client/bin /usr/src/app/client/bin/
+RUN npm install
 
 EXPOSE 80
+
 CMD npm start
