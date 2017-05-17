@@ -4,6 +4,7 @@
   "description": "Pezula website.",
   "main": "server.js",
   "scripts": {
+    "build-production": "webpack --progress --colors -p",
     "build": "webpack --progress --colors",
     "start": "node server.js"
   },

@@ -6,4 +6,6 @@ class Store {
 
 var store = window.store = new Store
 
+store.name = "Andrew"
+
 export default store

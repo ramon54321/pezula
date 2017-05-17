@@ -11,7 +11,7 @@ const app = document.getElementById("app")
 @observer
 class TodoList extends React.Component {
   render() {
-    return <p>Hello, {this.props.store.name}.</p>
+    return <p>Hello Mr {this.props.store.name}.</p>
   }
 }
 
