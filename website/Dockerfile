@@ -10,6 +10,7 @@ WORKDIR /usr/src/app
 #COPY . /usr/src/app/
 #RUN npm install
 
+COPY ./package.json /usr/src/app/package.json
 COPY ./server /usr/src/app/server/
 COPY ./client/bin /usr/src/app/client/bin/
 
