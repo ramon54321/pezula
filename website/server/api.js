@@ -1,3 +1,5 @@
+var session = require("express-session")
+var bodyParser = require("body-parser")
 var database = require("./database.js")
 
 module.exports = function (app) {
@@ -13,11 +15,13 @@ module.exports = function (app) {
   	})
   })
 
-  app.get('/api/person/add', function (req, res) {
-  	new database.PersonModel({
+  app.post('/api/person/add', function (req, res) {
+
+    /*new database.PersonModel({
   		name: "James",
   		age: 27
   	}).save()
-  	res.send("Data added")
+    */
+  	res.send("Data added " + req.body.username + " " + req.body.password)
   })
 }

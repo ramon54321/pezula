@@ -9,6 +9,12 @@ var personSchema = new Schema({
 	age: Number
 })
 var PersonModel = mongoose.model("Person", personSchema)
+var userSchema = new Schema({
+	username: String,
+	password: String,
+	type: String
+})
+var UserModel = mongoose.model("User", userSchema)
 
 module.exports = {
   mongoose: mongoose,

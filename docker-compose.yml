@@ -4,7 +4,7 @@ services:
   website-service:
     build: ./website
     volumes:
-      - ./website:/usr/src/app
+      - ./website:/usr/src/app/website
     ports:
       - 80:80
   database-service:

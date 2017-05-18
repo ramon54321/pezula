@@ -1,4 +1,4 @@
-var database = require("./database.js")
+//var database = require("./database.js")
 
 module.exports = function (app) {
   // Routes

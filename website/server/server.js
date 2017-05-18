@@ -15,6 +15,9 @@ require("./routes.js")(app)
 require("./passport.js")(app)
 require("./api.js")(app)
 
+
+console.log("Before listen");
+
 app.listen(80, function () {
 	console.log("Server listening on port 80.");
 })
