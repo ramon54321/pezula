@@ -4,8 +4,8 @@ var database = require("./database.js")
 
 module.exports = function (app) {
   // Api
-  app.get('/api/person/findall', function (req, res) {
-  	database.PersonModel.find().exec(function (err, data) {
+  app.get('/api/user', function (req, res) {
+  	database.UserModel.find().exec(function (err, data) {
   		if(err) {
   			console.log("Error in data retrieval.");
   			res.send(err)
@@ -15,13 +15,12 @@ module.exports = function (app) {
   	})
   })
 
-  app.post('/api/person/add', function (req, res) {
-
-    /*new database.PersonModel({
-  		name: "James",
-  		age: 27
+  app.post('/api/user', function (req, res) {
+    new database.UserModel({
+  		username: req.body.username,
+  		password: req.body.password,
+      type: req.body.type
   	}).save()
-    */
   	res.send("Data added " + req.body.username + " " + req.body.password)
   })
 }

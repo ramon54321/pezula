@@ -5,6 +5,7 @@
   "main": "server/server.js",
   "scripts": {
     "build-production": "webpack --progress --colors -p",
+    "build-watch": "webpack --progress --colors --watch",
     "build": "webpack --progress --colors",
     "start": "node server/server.js"
   },
