@@ -43,11 +43,12 @@ body
   padding-top: 6em
   padding-bottom: 6em
 
-  @media (max-width: 1000px)
-    width: 560px
+  @media #{$device_large}
+    width: 1360px
 
-  @media (min-width: 1600px)
-    width: 1400px
+  @media #{$device_mobile}
+    font-size: 28pt
+    width: 96vw
 
 .pageTitle
   font-size: 80pt
@@ -58,11 +59,18 @@ body
   display: flex
   justify-content: center
 
+  @media #{$device_mobile}
+    display: none
+
 .pageSectionTitle
   width: 100%
   text-align: center
   font-size: 14pt
   line-height: 14pt
+  margin-bottom: 1em
+
+  @media #{$device_mobile}
+    font-size: 42pt
 
 .pageSection1
   background-image: url("../res/landscape4.jpg")
@@ -71,6 +79,9 @@ body
   font-size: 80pt
   height: 5em
   color: $color_primary_light
+
+  @media #{$device_mobile}
+    height: 7.2em
 
 .pageSection2
   background-color: $color_primary_dark
