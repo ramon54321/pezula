@@ -31,8 +31,10 @@
     "passport-local": "^1.0.0",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
+    "resolve-url-loader": "^2.0.2",
     "sass-loader": "^6.0.5",
     "style-loader": "^0.17.0",
+    "url-loader": "^0.5.8",
     "webpack": "^2.5.1"
   }
 }
