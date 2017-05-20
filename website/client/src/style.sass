@@ -37,18 +37,16 @@ body
 
 .pageSubSectionContainer
   height: 100%
-  width: 920px
   text-align: justify
   font-size: 12pt
   padding-top: 6em
   padding-bottom: 6em
-
-  @media #{$device_large}
-    width: 1360px
-
-  @media #{$device_mobile}
-    font-size: 28pt
-    width: 96vw
+  @media #{$media_small}
+    font-size: 24pt
+  @media #{$media_medium}
+    width: 780px
+  @media #{$media_large}
+    width: 1340px
 
 .pageTitle
   font-size: 80pt
@@ -58,8 +56,7 @@ body
 .pageTitleButtonContainer
   display: flex
   justify-content: center
-
-  @media #{$device_mobile}
+  @media #{$media_small}
     display: none
 
 .pageSectionTitle
@@ -68,9 +65,8 @@ body
   font-size: 14pt
   line-height: 14pt
   margin-bottom: 1em
-
-  @media #{$device_mobile}
-    font-size: 42pt
+  @media #{$media_small}
+    font-size: 34pt
 
 .pageSection1
   background-image: url("../res/landscape4.jpg")
@@ -79,9 +75,8 @@ body
   font-size: 80pt
   height: 5em
   color: $color_primary_light
-
-  @media #{$device_mobile}
-    height: 7.2em
+  @media #{$media_small}
+    height: 6.5em
 
 .pageSection2
   background-color: $color_primary_dark

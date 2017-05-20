@@ -30,6 +30,9 @@
   margin-right: 2ch
   margin-top: 2em
   height: 1.5em
+  @media #{$media_small}
+    width: 20ch
+    margin-top: 1.5em
 
 .navButton
   height: 1.5em
@@ -37,10 +40,14 @@
   color: $color_primary_light
   cursor: pointer
   transition: 0.3s
+  @media #{$media_small}
+    font-size: 18pt
 
   &::after
     position: absolute
     bottom: 0
+    @media #{$media_small}
+      bottom: -0.5em
     left: 50%
     width: 0%
     height: 1px
@@ -52,6 +59,8 @@
 
   &:hover::after
     bottom: 0
+    @media #{$media_small}
+      bottom: -0.5em
     left: 0
     width: 100%
 
