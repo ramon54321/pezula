@@ -18,8 +18,9 @@ export const IndexSection1 = () => (
 export const IndexSection2 = () => (
   <div className={styles.pageSectionContainer + " " + styles.pageSection2}>
     <div className={styles.pageSubSectionContainer}>
-      <div className={styles.pageSectionTitle}>Lorem Ipsum</div>
-      <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
+      <div className={styles.pageSectionTitle}>WHAT WE DO</div>
+      <img src="/images/diagram1.png" width="100%" style={{maxWidth: 1268 + "px"}} className={styles.centerImage + " " + styles.imagePadding}/>
+      <p>At let vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
     </div>
   </div>
 )
@@ -27,7 +28,7 @@ export const IndexSection2 = () => (
 export const IndexSection3 = () => (
   <div className={styles.pageSectionContainer + " " + styles.pageSection3}>
     <div className={styles.pageSubSectionContainer}>
-      <div className={styles.pageSectionTitle}>Lorem Ipsum</div>
+      <div className={styles.pageSectionTitle}>FEATURED LISTINGS</div>
       <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.</p>
       <p>Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi.</p>
       <div>
