@@ -8,7 +8,20 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.sass$/, loader: "style-loader!css-loader!resolve-url-loader!sass-loader" },
+      { test: /\.sass$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: '[path][name]__[local]--[hash:base64:5]'
+            }
+          },
+          'resolve-url-loader',
+          'sass-loader'
+        ]
+      },
       { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
       { test: /\.(png|jpg)$/, exclude: /node_modules/, loader: "url-loader" }
     ]

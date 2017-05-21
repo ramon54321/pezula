@@ -3,6 +3,9 @@
 h1 h2 h3 h4 h5 h6 h6
   font-family: 'Open Sans', sans-serif
 
+a
+  text-decoration: none
+
 body
   margin: 0
   padding: 0
@@ -39,8 +42,8 @@ body
   height: 100%
   text-align: justify
   font-size: 12pt
-  padding-top: 6em
-  padding-bottom: 6em
+  padding-top: 3em
+  padding-bottom: 3em
   @media #{$media_small}
     font-size: 24pt
   @media #{$media_medium}
@@ -48,40 +51,11 @@ body
   @media #{$media_large}
     width: 1340px
 
-.pageTitle
-  font-size: 80pt
-  margin-top: 0.75em
-  text-align: center
-
-.pageTitleButtonContainer
-  display: flex
-  justify-content: center
-  @media #{$media_small}
-    display: none
-
 .pageSectionTitle
   width: 100%
   text-align: center
   font-size: 14pt
   line-height: 14pt
-  margin-bottom: 1em
+  margin-bottom: 2em
   @media #{$media_small}
     font-size: 34pt
-
-.pageSection1
-  background-image: url("../res/landscape5.jpg")
-  background-position: center
-  background-size: cover
-  font-size: 80pt
-  height: 5em
-  color: $color_primary_light
-  @media #{$media_small}
-    height: 6.5em
-
-.pageSection2
-  background-color: $color_primary_dark
-  color: $color_primary_light
-
-.pageSection3
-  background-color: $color_primary_light
-  color: $color_primary_dark

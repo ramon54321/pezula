@@ -1,0 +1,31 @@
+@import "../../style.sass"
+
+.pageTitle
+  font-size: 80pt
+  margin-top: 0.75em
+  text-align: center
+  @media #{$media_small}
+    padding-bottom: 1em
+
+.pageTitleButtonContainer
+  display: flex
+  justify-content: center
+  font-size: 80pt
+  padding-bottom: 1em
+  @media #{$media_small}
+    display: none
+
+.pageSection1
+  background-image: url("../../../res/landscape5.jpg")
+  background-position: center
+  background-size: cover
+  font-size: 80pt
+  color: $color_primary_light
+
+.pageSection2
+  background-color: $color_primary_dark
+  color: $color_primary_light
+
+.pageSection3
+  background-color: $color_primary_light
+  color: $color_primary_dark
